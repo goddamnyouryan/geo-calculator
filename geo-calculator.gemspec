@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['ryan.macinnes@gmail.com']
   spec.description   = %q{Use ruby geocoder calculation methods without geocoding}
   spec.summary       = %q{This gem uses the ruby geocoder gem calculation methods to allow calculation of nearby locations without needing all the geocoding code.}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/goddamnyouryan/geo-calculator'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'activerecord'
+  spec.add_development_dependency 'sqlite3'
 end

@@ -20,12 +20,22 @@ Or install it yourself as:
 
 Add the line `include Geocoder::Store::ActiveRecord` into your model like so:
 
-	app/models/location.rb
+	# app/models/location.rb
 	class Location < ActiveRecord::Base
 	  include Geocoder::Store::ActiveRecord
+
+	  def self.geocoder_options
+	    {
+	      latitude: 'latitude',
+	      longitude: 'longitude',
+	      units: :mi
+	    }
+	  end
 	end
 
 make sure that your model has a `latitude` and `longitude` column.
+
+Make sure to define the `geocoder_options` method, and specify the names of your latitude / longitude columns plus the units you want to use.
 
 This will give your model a bunch of calculation methods, like `.near` and `.within_bounding_box`. See them all [here](https://github.com/alexreisner/geocoder/blob/master/lib/geocoder/stores/active_record.rb)
 
