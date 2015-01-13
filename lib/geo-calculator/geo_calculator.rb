@@ -1,6 +1,5 @@
 require 'geo-calculator/version'
-
-module GeoCalculator
-    # Your code goes here...
-  end
-end
+require 'geo-calculator/sql'
+require 'geo-calculator/calculations'
+require 'geo-calculator/store/base'
+require 'geo-calculator/store/active_record'
