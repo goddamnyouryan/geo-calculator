@@ -1,6 +1,6 @@
-# Geo::Calculator
+# GeoCalculator
 
-TODO: Write a gem description
+GeoCalculator is an extraction of the calculation methods from the [Ruby Geocoder](https://github.com/alexreisner/geocoder) gem. Its purpose is to allow the geocoding calculation methods for models that already have latitude and longitude (obtained from the browser or an iphone app) to use distance calculations to find nearby model instances. It was extracted for use in Heat.
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the line `extend GeoCalculator` into your model like so:
+
+	app/models/location.rb
+	class Location < ActiveRecord::Base
+	  extend GeoCalculator
+	end
+
+make sure that your model has a `latitude` and `longitude` column.
+
+This will give your model a bunch of calculation methods, like `.near` and `.within_bounding_box`. See them all [here](https://github.com/alexreisner/geocoder/blob/master/lib/geocoder/stores/active_record.rb)
 
 ## Contributing
 
