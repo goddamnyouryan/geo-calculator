@@ -18,11 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-Add the line `extend GeoCalculator` into your model like so:
+Add the line `include Geocoder::Store::ActiveRecord` into your model like so:
 
 	app/models/location.rb
 	class Location < ActiveRecord::Base
-	  extend GeoCalculator
+	  include Geocoder::Store::ActiveRecord
 	end
 
 make sure that your model has a `latitude` and `longitude` column.

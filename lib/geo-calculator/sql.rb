@@ -1,4 +1,4 @@
-module GeoCalculator
+module Geocoder
   module Sql
     extend self
 

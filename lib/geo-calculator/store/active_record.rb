@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'geo-calculator/sql'
 require 'geo-calculator/store/base'
+require 'byebug'
 
 ##
 # Add geocoding functionality to any ActiveRecord object.
